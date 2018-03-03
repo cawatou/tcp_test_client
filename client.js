@@ -2,6 +2,7 @@ var net = require('net');
 var request = process.argv[2];
 var skip = process.argv[3] ? process.argv[3] : '';
 var client = new net.Socket();
+console.log(request);
 client.connect(1337, '185.22.235.182', function() {
 	console.log('Connected');
     
@@ -16,12 +17,12 @@ client.connect(1337, '185.22.235.182', function() {
             break;
         
         case 'key':
-            var kеу_initial = {
-                "event": "kеу_initial",
+            var key_initial = {
+                "event": "key_initial",
                 "serial_number": "8400503587105c2e08"
             };
-            kеу_initial = JSON.stringify(kеу_initial);
-            client.write(kеу_initial);
+            key_initial = JSON.stringify(key_initial);
+            client.write(key_initial);
             break;
         
         case 'key_next':
