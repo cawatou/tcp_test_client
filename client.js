@@ -7,10 +7,19 @@ client.connect(1337, '185.22.235.182', function() {
 	console.log('Connected');
     
     switch(request){
+        case 'test':
+            var config_request = {
+                "event": "test",
+                "serial_number": "84005035c504382e09ce"
+            };
+            config_request = JSON.stringify(config_request);
+            client.write(config_request);
+            break;        
+        
         case 'config':
             var config_request = {
                 "event": "config_request",
-                "serial_number": "8400503587105c2e08"
+                "serial_number": "84005035c504382e09ce"
             };
             config_request = JSON.stringify(config_request);
             client.write(config_request);
@@ -19,7 +28,7 @@ client.connect(1337, '185.22.235.182', function() {
         case 'keys':
             var keys = {
                 "event": "keys",
-                "serial_number": "8400503587105c2e08",
+                "serial_number": "84005035c504382e09ce",
                 "skip": skip
             };
             keys = JSON.stringify(keys);
@@ -29,7 +38,7 @@ client.connect(1337, '185.22.235.182', function() {
         case 'add_key':
             var key = {
                 "event": "add_key",
-                "serial_number": "8400503587105c2e08",
+                "serial_number": "84005035c504382e09ce",
                 "key": "01AB87F11"
             };
             key = JSON.stringify(key);
@@ -39,7 +48,7 @@ client.connect(1337, '185.22.235.182', function() {
         case 'flats_off':
             var flat = {
                 "event": "flats_off",
-                "serial_number": "8400503587105c2e08",
+                "serial_number": "84005035c504382e09ce",
                 "skip": skip
             };
             flat = JSON.stringify(flat);
@@ -49,7 +58,7 @@ client.connect(1337, '185.22.235.182', function() {
         case 'flats_app':
             var flat = {
                 "event": "flats_app",
-                "serial_number": "8400503587105c2e08",
+                "serial_number": "84005035c504382e09ce",
                 "skip": skip
             };
             flat = JSON.stringify(flat);
