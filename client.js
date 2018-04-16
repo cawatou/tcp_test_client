@@ -25,6 +25,16 @@ client.connect(1337, '185.22.235.182', function() {
             keys = JSON.stringify(keys);
             client.write(keys);
             break;
+        
+        case 'add_key':
+            var key = {
+                "event": "add_key",
+                "serial_number": "8400503587105c2e08",
+                "key": "01AB87F11"
+            };
+            key = JSON.stringify(key);
+            client.write(key);
+            break;
 
         case 'flats_off':
             var flat = {
