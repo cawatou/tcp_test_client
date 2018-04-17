@@ -1,6 +1,6 @@
 var net = require('net');
 var request = process.argv[2];
-var skip = process.argv[3] ? process.argv[3] : '';
+var skip = key_num = process.argv[3] ? process.argv[3] : '';
 var client = new net.Socket();
 
 client.connect(1337, '185.22.235.182', function() {
@@ -39,7 +39,7 @@ client.connect(1337, '185.22.235.182', function() {
             var key = {
                 "event": "add_key",
                 "serial_number": "84005035c504382e09ce",
-                "key": "01AB87F11"
+                "key": key_num
             };
             key = JSON.stringify(key);
             client.write(key);
