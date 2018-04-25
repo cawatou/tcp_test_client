@@ -47,8 +47,8 @@ client.connect(1337, '185.22.235.182', function() {
 
         case 'flats_off':
             var flat = {
-                "event": "flats_off",
-                "serial_number": "84005035c504382e09ce",
+                "event": "flats_okey ff",
+                "serial_number": "8400503587105c2e08",
                 "skip": skip
             };
             flat = JSON.stringify(flat);
